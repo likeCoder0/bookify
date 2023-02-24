@@ -14,12 +14,12 @@ import { getStorage, ref, uploadBytes,getDownloadURL } from "firebase/storage";
 const FirebaseContext = createContext(null);
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD0lohl7iQYACocNIzcjADhcvcaH-KO03s",
-  authDomain: "bookify-bed7e.firebaseapp.com",
-  projectId: "bookify-bed7e",
-  storageBucket: "bookify-bed7e.appspot.com",
-  messagingSenderId: "404876157695",
-  appId: "1:404876157695:web:4892849e4d4fb2a6d8a2ca",
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
 };
 
 export const useFirebase = () => useContext(FirebaseContext);
